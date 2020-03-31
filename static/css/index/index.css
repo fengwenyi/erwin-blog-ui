@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+.index-container {
+    width: 100%;
+    min-height: 500px;
+    background-color: #eee;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.header .common-header .header-container .header-logo-nav .header-nav .header-nav-item .header-nav-home {
+    color: #007fff;
+}
+
+@media only screen and (max-width: 960px) {
+    .index-container .wyf-center {
+        width: 100%;
+    }
+}

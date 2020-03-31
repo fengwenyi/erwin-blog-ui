@@ -1,0 +1,9 @@
+@charset "UTF-8";
+
+.blog-container {
+    width: 100%;
+    min-height: 500px;
+    background-color: #eee;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}

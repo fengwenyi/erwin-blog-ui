@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Comment</title>
+
+    <link rel="stylesheet" href="../static/css/blog/components/comment.css">
+</head>
+<body>
+    <div class="blog-comment-container">
+
+        <div class="blog-option-box">
+            <button type="button" class="layui-btn layui-btn-lg layui-btn-radius layui-btn-danger">
+                <i class="layui-icon layui-icon-heart-fill"></i> Like（<span class="like-count">0</span>）
+            </button>
+        </div>
+
+        <div class="blog-comment-form-box">
+            <img class="avatar" src="https://images.fengwenyi.com/1193158348289167361" alt="head">
+
+            <form class="layui-form blog-comment-form" action="">
+                <div class="layui-form-item">
+                        <textarea name="desc" placeholder="Write your comment" class="layui-textarea"></textarea>
+                </div>
+                <div class="layui-form-item">
+                    <button class="layui-btn layui-btn-normal" lay-submit lay-filter="formDemo">Submit</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="blog-comment-box">
+            <h3 class="title">
+                Comment list<span class="comment-count">100</span>
+            </h3>
+            <ul class="blog-comment-list">
+                <li class="blog-comment-item">
+                    <div class="user-avatar-info-box">
+                        <a href="#"><img class="avatar" src="https://images.fengwenyi.com/1193158348289167361" alt="head"></a>
+                        <div class="user-time-box">
+                            <span class="nickname"><a href="#">Erwin Feng</a></span>
+                            <span class="time">03.28 21:33</span>
+                        </div>
+                    </div>
+                    <div class="comment-content">
+                        毕业季读的一本书，恰似那段时光的迷惘，像极了书中的心情，青春心理成长的书，值得再看一次
+                    </div>
+                    <div class="comment-btn-box">
+                        <button type="button" class="layui-btn layui-btn-primary layui-btn-xs btn-comment-reply btn-pc-reply" onclick="onClickOpenCommentBox()">
+                            <i class="layui-icon layui-icon-edit"></i>Reply
+                        </button>
+                        <button type="button" class="layui-btn layui-btn-primary layui-btn-xs btn-comment-reply btn-mobile-reply" onclick="onClickOpenMobileCommentBox()">
+                            <i class="layui-icon layui-icon-edit"></i>Reply
+                        </button>
+                    </div>
+
+                    <div class="blog-comment-reply-box">
+                        <ul class="reply-list">
+                            <li class="reply-item">
+                                <div class="reply-user-avatar-info-box">
+                                    <div class="user-avatar-info-box">
+                                        <a href="#"><img class="avatar" src="https://images.fengwenyi.com/1193158348289167361" alt="head"></a>
+                                        <span class="user-nickname"><a href="#">User Nickname</a></span>
+                                    </div>
+                                    <span class="time">03.28 21:33</span>
+                                </div>
+                                <div class="reply-content-box">
+                                    <a class="replied-user-box" href="#">@<span>Replied User Nickname</span></a>
+                                    <span class="reply-content">
+                                        当我读完的时候，有一种愉快的心情，特别是读最后一段时，那是一种解放，一种开阔，一种放下，又是一种开始，在昭示着我们，青春正在进行
+                                    </span>
+                                </div>
+                                <div class="reply-btn-box">
+                                    <button type="button" class="layui-btn layui-btn-primary layui-btn-xs btn-reply-reply btn-pc-reply" onclick="onClickOpenCommentBox()">
+                                        <i class="layui-icon layui-icon-edit"></i>Reply
+                                    </button>
+                                    <button type="button" class="layui-btn layui-btn-primary layui-btn-xs btn-reply-reply btn-mobile-reply" onclick="onClickOpenMobileCommentBox()">
+                                        <i class="layui-icon layui-icon-edit"></i>Reply
+                                    </button>
+                                </div>
+                            </li>
+                            <li class="reply-item">
+                                <div class="reply-user-avatar-info-box">
+                                    <div class="user-avatar-info-box">
+                                        <a href="#"><img class="avatar" src="https://images.fengwenyi.com/1193158348289167361" alt="head"></a>
+                                        <span class="user-nickname"><a href="#">User Nickname</a></span>
+                                    </div>
+                                    <span class="time">03.28 21:33</span>
+                                </div>
+                                <div class="reply-content-box">
+                                    <a class="replied-user-box" href="#">@<span>Replied User Nickname</span></a>
+                                    <span class="reply-content">
+                                        当我读完的时候，有一种愉快的心情，特别是读最后一段时，那是一种解放，一种开阔，一种放下，又是一种开始，在昭示着我们，青春正在进行
+                                    </span>
+                                </div>
+                                <div class="reply-btn-box">
+                                    <button type="button" class="layui-btn layui-btn-primary layui-btn-xs btn-reply-reply btn-pc-reply" onclick="onClickOpenCommentBox()">
+                                        <i class="layui-icon layui-icon-edit"></i>Reply
+                                    </button>
+                                    <button type="button" class="layui-btn layui-btn-primary layui-btn-xs btn-reply-reply btn-mobile-reply" onclick="onClickOpenMobileCommentBox()">
+                                        <i class="layui-icon layui-icon-edit"></i>Reply
+                                    </button>
+                                </div>
+                            </li>
+                            <li class="reply-item">
+                                <div class="reply-user-avatar-info-box">
+                                    <div class="user-avatar-info-box">
+                                        <a href="#"><img class="avatar" src="https://images.fengwenyi.com/1193158348289167361" alt="head"></a>
+                                        <span class="user-nickname"><a href="#">User Nickname</a></span>
+                                    </div>
+                                    <span class="time">03.28 21:33</span>
+                                </div>
+                                <div class="reply-content-box">
+                                    <a class="replied-user-box" href="#">@<span>Replied User Nickname</span></a>
+                                    <span class="reply-content">
+                                        当我读完的时候，有一种愉快的心情，特别是读最后一段时，那是一种解放，一种开阔，一种放下，又是一种开始，在昭示着我们，青春正在进行
+                                    </span>
+                                </div>
+                                <div class="reply-btn-box">
+                                    <button type="button" class="layui-btn layui-btn-primary layui-btn-xs btn-reply-reply btn-pc-reply" onclick="onClickOpenCommentBox()">
+                                        <i class="layui-icon layui-icon-edit"></i>Reply
+                                    </button>
+                                    <button type="button" class="layui-btn layui-btn-primary layui-btn-xs btn-reply-reply btn-mobile-reply" onclick="onClickOpenMobileCommentBox()">
+                                        <i class="layui-icon layui-icon-edit"></i>Reply
+                                    </button>
+                                </div>
+                            </li>
+                            <li class="reply-item">
+                                <div class="reply-user-avatar-info-box">
+                                    <div class="user-avatar-info-box">
+                                        <a href="#"><img class="avatar" src="https://images.fengwenyi.com/1193158348289167361" alt="head"></a>
+                                        <span class="user-nickname"><a href="#">User Nickname</a></span>
+                                    </div>
+                                    <span class="time">03.28 21:33</span>
+                                </div>
+                                <div class="reply-content-box">
+                                    <a class="replied-user-box" href="#">@<span>Replied User Nickname</span></a>
+                                    <span class="reply-content">
+                                        当我读完的时候，有一种愉快的心情，特别是读最后一段时，那是一种解放，一种开阔，一种放下，又是一种开始，在昭示着我们，青春正在进行
+                                    </span>
+                                </div>
+                                <div class="reply-btn-box">
+                                    <button type="button" class="layui-btn layui-btn-primary layui-btn-xs btn-reply-reply btn-pc-reply" onclick="onClickOpenCommentBox()">
+                                        <i class="layui-icon layui-icon-edit"></i>Reply
+                                    </button>
+                                    <button type="button" class="layui-btn layui-btn-primary layui-btn-xs btn-reply-reply btn-mobile-reply" onclick="onClickOpenMobileCommentBox()">
+                                        <i class="layui-icon layui-icon-edit"></i>Reply
+                                    </button>
+                                </div>
+                            </li>
+                            <li class="reply-item">
+                                <div class="reply-user-avatar-info-box">
+                                    <div class="user-avatar-info-box">
+                                        <a href="#"><img class="avatar" src="https://images.fengwenyi.com/1193158348289167361" alt="head"></a>
+                                        <span class="user-nickname"><a href="#">User Nickname</a></span>
+                                    </div>
+                                    <span class="time">03.28 21:33</span>
+                                </div>
+                                <div class="reply-content-box">
+                                    <a class="replied-user-box" href="#">@<span>Replied User Nickname</span></a>
+                                    <span class="reply-content">
+                                        当我读完的时候，有一种愉快的心情，特别是读最后一段时，那是一种解放，一种开阔，一种放下，又是一种开始，在昭示着我们，青春正在进行
+                                    </span>
+                                </div>
+                                <div class="reply-btn-box">
+                                    <button type="button" class="layui-btn layui-btn-primary layui-btn-xs btn-reply-reply btn-pc-reply" onclick="onClickOpenCommentBox()">
+                                        <i class="layui-icon layui-icon-edit"></i>Reply
+                                    </button>
+                                    <button type="button" class="layui-btn layui-btn-primary layui-btn-xs btn-reply-reply btn-mobile-reply" onclick="onClickOpenMobileCommentBox()">
+                                        <i class="layui-icon layui-icon-edit"></i>Reply
+                                    </button>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="blog-comment-item">
+                    <div class="user-avatar-info-box">
+                        <a href="#"><img class="avatar" src="https://images.fengwenyi.com/1193158348289167361" alt="head"></a>
+                        <div class="user-time-box">
+                            <span class="nickname"><a href="#">Erwin Feng</a></span>
+                            <span class="time">03.28 21:33</span>
+                        </div>
+                    </div>
+                    <div class="comment-content">
+                        毕业季读的一本书，恰似那段时光的迷惘，像极了书中的心情，青春心理成长的书，值得再看一次
+                    </div>
+                    <div class="comment-btn-box">
+                        <button type="button" class="layui-btn layui-btn-primary layui-btn-xs btn-comment-reply btn-pc-reply" onclick="onClickOpenCommentBox()">
+                            <i class="layui-icon layui-icon-edit"></i>Reply
+                        </button>
+                        <button type="button" class="layui-btn layui-btn-primary layui-btn-xs btn-comment-reply btn-mobile-reply" onclick="onClickOpenMobileCommentBox()">
+                            <i class="layui-icon layui-icon-edit"></i>Reply
+                        </button>
+                    </div>
+
+                    <div class="blog-comment-reply-box">
+                        <ul class="reply-list">
+                            <li class="reply-item">
+                                <div class="reply-user-avatar-info-box">
+                                    <div class="user-avatar-info-box">
+                                        <a href="#"><img class="avatar" src="https://images.fengwenyi.com/1193158348289167361" alt="head"></a>
+                                        <span class="user-nickname"><a href="#">User Nickname</a></span>
+                                    </div>
+                                    <span class="time">03.28 21:33</span>
+                                </div>
+                                <div class="reply-content-box">
+                                    <a class="replied-user-box" href="#">@<span>Replied User Nickname</span></a>
+                                    <span class="reply-content">
+                                        当我读完的时候，有一种愉快的心情，特别是读最后一段时，那是一种解放，一种开阔，一种放下，又是一种开始，在昭示着我们，青春正在进行
+                                    </span>
+                                </div>
+                                <div class="reply-btn-box">
+                                    <button type="button" class="layui-btn layui-btn-primary layui-btn-xs btn-reply-reply btn-pc-reply" onclick="onClickOpenCommentBox()">
+                                        <i class="layui-icon layui-icon-edit"></i>Reply
+                                    </button>
+                                    <button type="button" class="layui-btn layui-btn-primary layui-btn-xs btn-reply-reply btn-mobile-reply" onclick="onClickOpenMobileCommentBox()">
+                                        <i class="layui-icon layui-icon-edit"></i>Reply
+                                    </button>
+                                </div>
+                            </li>
+                            <li class="reply-item">
+                                <div class="reply-user-avatar-info-box">
+                                    <div class="user-avatar-info-box">
+                                        <a href="#"><img class="avatar" src="https://images.fengwenyi.com/1193158348289167361" alt="head"></a>
+                                        <span class="user-nickname"><a href="#">User Nickname</a></span>
+                                    </div>
+                                    <span class="time">03.28 21:33</span>
+                                </div>
+                                <div class="reply-content-box">
+                                    <a class="replied-user-box" href="#">@<span>Replied User Nickname</span></a>
+                                    <span class="reply-content">
+                                        当我读完的时候，有一种愉快的心情，特别是读最后一段时，那是一种解放，一种开阔，一种放下，又是一种开始，在昭示着我们，青春正在进行
+                                    </span>
+                                </div>
+                                <div class="reply-btn-box">
+                                    <button type="button" class="layui-btn layui-btn-primary layui-btn-xs btn-reply-reply btn-pc-reply" onclick="onClickOpenCommentBox()">
+                                        <i class="layui-icon layui-icon-edit"></i>Reply
+                                    </button>
+                                    <button type="button" class="layui-btn layui-btn-primary layui-btn-xs btn-reply-reply btn-mobile-reply" onclick="onClickOpenMobileCommentBox()">
+                                        <i class="layui-icon layui-icon-edit"></i>Reply
+                                    </button>
+                                </div>
+                            </li>
+                            <li class="reply-item">
+                                <div class="reply-user-avatar-info-box">
+                                    <div class="user-avatar-info-box">
+                                        <a href="#"><img class="avatar" src="https://images.fengwenyi.com/1193158348289167361" alt="head"></a>
+                                        <span class="user-nickname"><a href="#">User Nickname</a></span>
+                                    </div>
+                                    <span class="time">03.28 21:33</span>
+                                </div>
+                                <div class="reply-content-box">
+                                    <a class="replied-user-box" href="#">@<span>Replied User Nickname</span></a>
+                                    <span class="reply-content">
+                                        当我读完的时候，有一种愉快的心情，特别是读最后一段时，那是一种解放，一种开阔，一种放下，又是一种开始，在昭示着我们，青春正在进行
+                                    </span>
+                                </div>
+                                <div class="reply-btn-box">
+                                    <button type="button" class="layui-btn layui-btn-primary layui-btn-xs btn-reply-reply btn-pc-reply" onclick="onClickOpenCommentBox()">
+                                        <i class="layui-icon layui-icon-edit"></i>Reply
+                                    </button>
+                                    <button type="button" class="layui-btn layui-btn-primary layui-btn-xs btn-reply-reply btn-mobile-reply" onclick="onClickOpenMobileCommentBox()">
+                                        <i class="layui-icon layui-icon-edit"></i>Reply
+                                    </button>
+                                </div>
+                            </li>
+                            <li class="reply-item">
+                                <div class="reply-user-avatar-info-box">
+                                    <div class="user-avatar-info-box">
+                                        <a href="#"><img class="avatar" src="https://images.fengwenyi.com/1193158348289167361" alt="head"></a>
+                                        <span class="user-nickname"><a href="#">User Nickname</a></span>
+                                    </div>
+                                    <span class="time">03.28 21:33</span>
+                                </div>
+                                <div class="reply-content-box">
+                                    <a class="replied-user-box" href="#">@<span>Replied User Nickname</span></a>
+                                    <span class="reply-content">
+                                        当我读完的时候，有一种愉快的心情，特别是读最后一段时，那是一种解放，一种开阔，一种放下，又是一种开始，在昭示着我们，青春正在进行
+                                    </span>
+                                </div>
+                                <div class="reply-btn-box">
+                                    <button type="button" class="layui-btn layui-btn-primary layui-btn-xs btn-reply-reply btn-pc-reply" onclick="onClickOpenCommentBox()">
+                                        <i class="layui-icon layui-icon-edit"></i>Reply
+                                    </button>
+                                    <button type="button" class="layui-btn layui-btn-primary layui-btn-xs btn-reply-reply btn-mobile-reply" onclick="onClickOpenMobileCommentBox()">
+                                        <i class="layui-icon layui-icon-edit"></i>Reply
+                                    </button>
+                                </div>
+                            </li>
+                            <li class="reply-item">
+                                <div class="reply-user-avatar-info-box">
+                                    <div class="user-avatar-info-box">
+                                        <a href="#"><img class="avatar" src="https://images.fengwenyi.com/1193158348289167361" alt="head"></a>
+                                        <span class="user-nickname"><a href="#">User Nickname</a></span>
+                                    </div>
+                                    <span class="time">03.28 21:33</span>
+                                </div>
+                                <div class="reply-content-box">
+                                    <a class="replied-user-box" href="#">@<span>Replied User Nickname</span></a>
+                                    <span class="reply-content">
+                                        当我读完的时候，有一种愉快的心情，特别是读最后一段时，那是一种解放，一种开阔，一种放下，又是一种开始，在昭示着我们，青春正在进行
+                                    </span>
+                                </div>
+                                <div class="reply-btn-box">
+                                    <button type="button" class="layui-btn layui-btn-primary layui-btn-xs btn-reply-reply btn-pc-reply" onclick="onClickOpenCommentBox()">
+                                        <i class="layui-icon layui-icon-edit"></i>Reply
+                                    </button>
+                                    <button type="button" class="layui-btn layui-btn-primary layui-btn-xs btn-reply-reply btn-mobile-reply" onclick="onClickOpenMobileCommentBox()">
+                                        <i class="layui-icon layui-icon-edit"></i>Reply
+                                    </button>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="blog-comment-item">
+                    <div class="user-avatar-info-box">
+                        <a href="#"><img class="avatar" src="https://images.fengwenyi.com/1193158348289167361" alt="head"></a>
+                        <div class="user-time-box">
+                            <span class="nickname"><a href="#">Erwin Feng</a></span>
+                            <span class="time">03.28 21:33</span>
+                        </div>
+                    </div>
+                    <div class="comment-content">
+                        毕业季读的一本书，恰似那段时光的迷惘，像极了书中的心情，青春心理成长的书，值得再看一次
+                    </div>
+                    <div class="comment-btn-box">
+                        <button type="button" class="layui-btn layui-btn-primary layui-btn-xs btn-comment-reply btn-pc-reply" onclick="onClickOpenCommentBox()">
+                            <i class="layui-icon layui-icon-edit"></i>Reply
+                        </button>
+                        <button type="button" class="layui-btn layui-btn-primary layui-btn-xs btn-comment-reply btn-mobile-reply" onclick="onClickOpenMobileCommentBox()">
+                            <i class="layui-icon layui-icon-edit"></i>Reply
+                        </button>
+                    </div>
+
+                    <div class="blog-comment-reply-box">
+                        <ul class="reply-list">
+                            <li class="reply-item">
+                                <div class="reply-user-avatar-info-box">
+                                    <div class="user-avatar-info-box">
+                                        <a href="#"><img class="avatar" src="https://images.fengwenyi.com/1193158348289167361" alt="head"></a>
+                                        <span class="user-nickname"><a href="#">User Nickname</a></span>
+                                    </div>
+                                    <span class="time">03.28 21:33</span>
+                                </div>
+                                <div class="reply-content-box">
+                                    <a class="replied-user-box" href="#">@<span>Replied User Nickname</span></a>
+                                    <span class="reply-content">
+                                        当我读完的时候，有一种愉快的心情，特别是读最后一段时，那是一种解放，一种开阔，一种放下，又是一种开始，在昭示着我们，青春正在进行
+                                    </span>
+                                </div>
+                                <div class="reply-btn-box">
+                                    <button type="button" class="layui-btn layui-btn-primary layui-btn-xs btn-reply-reply btn-pc-reply" onclick="onClickOpenCommentBox()">
+                                        <i class="layui-icon layui-icon-edit"></i>Reply
+                                    </button>
+                                    <button type="button" class="layui-btn layui-btn-primary layui-btn-xs btn-reply-reply btn-mobile-reply" onclick="onClickOpenMobileCommentBox()">
+                                        <i class="layui-icon layui-icon-edit"></i>Reply
+                                    </button>
+                                </div>
+                            </li>
+                            <li class="reply-item">
+                                <div class="reply-user-avatar-info-box">
+                                    <div class="user-avatar-info-box">
+                                        <a href="#"><img class="avatar" src="https://images.fengwenyi.com/1193158348289167361" alt="head"></a>
+                                        <span class="user-nickname"><a href="#">User Nickname</a></span>
+                                    </div>
+                                    <span class="time">03.28 21:33</span>
+                                </div>
+                                <div class="reply-content-box">
+                                    <a class="replied-user-box" href="#">@<span>Replied User Nickname</span></a>
+                                    <span class="reply-content">
+                                        当我读完的时候，有一种愉快的心情，特别是读最后一段时，那是一种解放，一种开阔，一种放下，又是一种开始，在昭示着我们，青春正在进行
+                                    </span>
+                                </div>
+                                <div class="reply-btn-box">
+                                    <button type="button" class="layui-btn layui-btn-primary layui-btn-xs btn-reply-reply btn-pc-reply" onclick="onClickOpenCommentBox()">
+                                        <i class="layui-icon layui-icon-edit"></i>Reply
+                                    </button>
+                                    <button type="button" class="layui-btn layui-btn-primary layui-btn-xs btn-reply-reply btn-mobile-reply" onclick="onClickOpenMobileCommentBox()">
+                                        <i class="layui-icon layui-icon-edit"></i>Reply
+                                    </button>
+                                </div>
+                            </li>
+                            <li class="reply-item">
+                                <div class="reply-user-avatar-info-box">
+                                    <div class="user-avatar-info-box">
+                                        <a href="#"><img class="avatar" src="https://images.fengwenyi.com/1193158348289167361" alt="head"></a>
+                                        <span class="user-nickname"><a href="#">User Nickname</a></span>
+                                    </div>
+                                    <span class="time">03.28 21:33</span>
+                                </div>
+                                <div class="reply-content-box">
+                                    <a class="replied-user-box" href="#">@<span>Replied User Nickname</span></a>
+                                    <span class="reply-content">
+                                        当我读完的时候，有一种愉快的心情，特别是读最后一段时，那是一种解放，一种开阔，一种放下，又是一种开始，在昭示着我们，青春正在进行
+                                    </span>
+                                </div>
+                                <div class="reply-btn-box">
+                                    <button type="button" class="layui-btn layui-btn-primary layui-btn-xs btn-reply-reply btn-pc-reply" onclick="onClickOpenCommentBox()">
+                                        <i class="layui-icon layui-icon-edit"></i>Reply
+                                    </button>
+                                    <button type="button" class="layui-btn layui-btn-primary layui-btn-xs btn-reply-reply btn-mobile-reply" onclick="onClickOpenMobileCommentBox()">
+                                        <i class="layui-icon layui-icon-edit"></i>Reply
+                                    </button>
+                                </div>
+                            </li>
+                            <li class="reply-item">
+                                <div class="reply-user-avatar-info-box">
+                                    <div class="user-avatar-info-box">
+                                        <a href="#"><img class="avatar" src="https://images.fengwenyi.com/1193158348289167361" alt="head"></a>
+                                        <span class="user-nickname"><a href="#">User Nickname</a></span>
+                                    </div>
+                                    <span class="time">03.28 21:33</span>
+                                </div>
+                                <div class="reply-content-box">
+                                    <a class="replied-user-box" href="#">@<span>Replied User Nickname</span></a>
+                                    <span class="reply-content">
+                                        当我读完的时候，有一种愉快的心情，特别是读最后一段时，那是一种解放，一种开阔，一种放下，又是一种开始，在昭示着我们，青春正在进行
+                                    </span>
+                                </div>
+                                <div class="reply-btn-box">
+                                    <button type="button" class="layui-btn layui-btn-primary layui-btn-xs btn-reply-reply btn-pc-reply" onclick="onClickOpenCommentBox()">
+                                        <i class="layui-icon layui-icon-edit"></i>Reply
+                                    </button>
+                                    <button type="button" class="layui-btn layui-btn-primary layui-btn-xs btn-reply-reply btn-mobile-reply" onclick="onClickOpenMobileCommentBox()">
+                                        <i class="layui-icon layui-icon-edit"></i>Reply
+                                    </button>
+                                </div>
+                            </li>
+                            <li class="reply-item">
+                                <div class="reply-user-avatar-info-box">
+                                    <div class="user-avatar-info-box">
+                                        <a href="#"><img class="avatar" src="https://images.fengwenyi.com/1193158348289167361" alt="head"></a>
+                                        <span class="user-nickname"><a href="#">User Nickname</a></span>
+                                    </div>
+                                    <span class="time">03.28 21:33</span>
+                                </div>
+                                <div class="reply-content-box">
+                                    <a class="replied-user-box" href="#">@<span>Replied User Nickname</span></a>
+                                    <span class="reply-content">
+                                        当我读完的时候，有一种愉快的心情，特别是读最后一段时，那是一种解放，一种开阔，一种放下，又是一种开始，在昭示着我们，青春正在进行
+                                    </span>
+                                </div>
+                                <div class="reply-btn-box">
+                                    <button type="button" class="layui-btn layui-btn-primary layui-btn-xs btn-reply-reply btn-pc-reply" onclick="onClickOpenCommentBox()">
+                                        <i class="layui-icon layui-icon-edit"></i>Reply
+                                    </button>
+                                    <button type="button" class="layui-btn layui-btn-primary layui-btn-xs btn-reply-reply btn-mobile-reply" onclick="onClickOpenMobileCommentBox()">
+                                        <i class="layui-icon layui-icon-edit"></i>Reply
+                                    </button>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="blog-comment-item">
+                    <div class="user-avatar-info-box">
+                        <a href="#"><img class="avatar" src="https://images.fengwenyi.com/1193158348289167361" alt="head"></a>
+                        <div class="user-time-box">
+                            <span class="nickname"><a href="#">Erwin Feng</a></span>
+                            <span class="time">03.28 21:33</span>
+                        </div>
+                    </div>
+                    <div class="comment-content">
+                        毕业季读的一本书，恰似那段时光的迷惘，像极了书中的心情，青春心理成长的书，值得再看一次
+                    </div>
+                    <div class="comment-btn-box">
+                        <button type="button" class="layui-btn layui-btn-primary layui-btn-xs btn-comment-reply btn-pc-reply" onclick="onClickOpenCommentBox()">
+                            <i class="layui-icon layui-icon-edit"></i>Reply
+                        </button>
+                        <button type="button" class="layui-btn layui-btn-primary layui-btn-xs btn-comment-reply btn-mobile-reply" onclick="onClickOpenMobileCommentBox()">
+                            <i class="layui-icon layui-icon-edit"></i>Reply
+                        </button>
+                    </div>
+
+                    <div class="blog-comment-reply-box">
+                        <ul class="reply-list">
+                            <li class="reply-item">
+                                <div class="reply-user-avatar-info-box">
+                                    <div class="user-avatar-info-box">
+                                        <a href="#"><img class="avatar" src="https://images.fengwenyi.com/1193158348289167361" alt="head"></a>
+                                        <span class="user-nickname"><a href="#">User Nickname</a></span>
+                                    </div>
+                                    <span class="time">03.28 21:33</span>
+                                </div>
+                                <div class="reply-content-box">
+                                    <a class="replied-user-box" href="#">@<span>Replied User Nickname</span></a>
+                                    <span class="reply-content">
+                                        当我读完的时候，有一种愉快的心情，特别是读最后一段时，那是一种解放，一种开阔，一种放下，又是一种开始，在昭示着我们，青春正在进行
+                                    </span>
+                                </div>
+                                <div class="reply-btn-box">
+                                    <button type="button" class="layui-btn layui-btn-primary layui-btn-xs btn-reply-reply btn-pc-reply" onclick="onClickOpenCommentBox()">
+                                        <i class="layui-icon layui-icon-edit"></i>Reply
+                                    </button>
+                                    <button type="button" class="layui-btn layui-btn-primary layui-btn-xs btn-reply-reply btn-mobile-reply" onclick="onClickOpenMobileCommentBox()">
+                                        <i class="layui-icon layui-icon-edit"></i>Reply
+                                    </button>
+                                </div>
+                            </li>
+                            <li class="reply-item">
+                                <div class="reply-user-avatar-info-box">
+                                    <div class="user-avatar-info-box">
+                                        <a href="#"><img class="avatar" src="https://images.fengwenyi.com/1193158348289167361" alt="head"></a>
+                                        <span class="user-nickname"><a href="#">User Nickname</a></span>
+                                    </div>
+                                    <span class="time">03.28 21:33</span>
+                                </div>
+                                <div class="reply-content-box">
+                                    <a class="replied-user-box" href="#">@<span>Replied User Nickname</span></a>
+                                    <span class="reply-content">
+                                        当我读完的时候，有一种愉快的心情，特别是读最后一段时，那是一种解放，一种开阔，一种放下，又是一种开始，在昭示着我们，青春正在进行
+                                    </span>
+                                </div>
+                                <div class="reply-btn-box">
+                                    <button type="button" class="layui-btn layui-btn-primary layui-btn-xs btn-reply-reply btn-pc-reply" onclick="onClickOpenCommentBox()">
+                                        <i class="layui-icon layui-icon-edit"></i>Reply
+                                    </button>
+                                    <button type="button" class="layui-btn layui-btn-primary layui-btn-xs btn-reply-reply btn-mobile-reply" onclick="onClickOpenMobileCommentBox()">
+                                        <i class="layui-icon layui-icon-edit"></i>Reply
+                                    </button>
+                                </div>
+                            </li>
+                            <li class="reply-item">
+                                <div class="reply-user-avatar-info-box">
+                                    <div class="user-avatar-info-box">
+                                        <a href="#"><img class="avatar" src="https://images.fengwenyi.com/1193158348289167361" alt="head"></a>
+                                        <span class="user-nickname"><a href="#">User Nickname</a></span>
+                                    </div>
+                                    <span class="time">03.28 21:33</span>
+                                </div>
+                                <div class="reply-content-box">
+                                    <a class="replied-user-box" href="#">@<span>Replied User Nickname</span></a>
+                                    <span class="reply-content">
+                                        当我读完的时候，有一种愉快的心情，特别是读最后一段时，那是一种解放，一种开阔，一种放下，又是一种开始，在昭示着我们，青春正在进行
+                                    </span>
+                                </div>
+                                <div class="reply-btn-box">
+                                    <button type="button" class="layui-btn layui-btn-primary layui-btn-xs btn-reply-reply btn-pc-reply" onclick="onClickOpenCommentBox()">
+                                        <i class="layui-icon layui-icon-edit"></i>Reply
+                                    </button>
+                                    <button type="button" class="layui-btn layui-btn-primary layui-btn-xs btn-reply-reply btn-mobile-reply" onclick="onClickOpenMobileCommentBox()">
+                                        <i class="layui-icon layui-icon-edit"></i>Reply
+                                    </button>
+                                </div>
+                            </li>
+                            <li class="reply-item">
+                                <div class="reply-user-avatar-info-box">
+                                    <div class="user-avatar-info-box">
+                                        <a href="#"><img class="avatar" src="https://images.fengwenyi.com/1193158348289167361" alt="head"></a>
+                                        <span class="user-nickname"><a href="#">User Nickname</a></span>
+                                    </div>
+                                    <span class="time">03.28 21:33</span>
+                                </div>
+                                <div class="reply-content-box">
+                                    <a class="replied-user-box" href="#">@<span>Replied User Nickname</span></a>
+                                    <span class="reply-content">
+                                        当我读完的时候，有一种愉快的心情，特别是读最后一段时，那是一种解放，一种开阔，一种放下，又是一种开始，在昭示着我们，青春正在进行
+                                    </span>
+                                </div>
+                                <div class="reply-btn-box">
+                                    <button type="button" class="layui-btn layui-btn-primary layui-btn-xs btn-reply-reply btn-pc-reply" onclick="onClickOpenCommentBox()">
+                                        <i class="layui-icon layui-icon-edit"></i>Reply
+                                    </button>
+                                    <button type="button" class="layui-btn layui-btn-primary layui-btn-xs btn-reply-reply btn-mobile-reply" onclick="onClickOpenMobileCommentBox()">
+                                        <i class="layui-icon layui-icon-edit"></i>Reply
+                                    </button>
+                                </div>
+                            </li>
+                            <li class="reply-item">
+                                <div class="reply-user-avatar-info-box">
+                                    <div class="user-avatar-info-box">
+                                        <a href="#"><img class="avatar" src="https://images.fengwenyi.com/1193158348289167361" alt="head"></a>
+                                        <span class="user-nickname"><a href="#">User Nickname</a></span>
+                                    </div>
+                                    <span class="time">03.28 21:33</span>
+                                </div>
+                                <div class="reply-content-box">
+                                    <a class="replied-user-box" href="#">@<span>Replied User Nickname</span></a>
+                                    <span class="reply-content">
+                                        当我读完的时候，有一种愉快的心情，特别是读最后一段时，那是一种解放，一种开阔，一种放下，又是一种开始，在昭示着我们，青春正在进行
+                                    </span>
+                                </div>
+                                <div class="reply-btn-box">
+                                    <button type="button" class="layui-btn layui-btn-primary layui-btn-xs btn-reply-reply btn-pc-reply" onclick="onClickOpenCommentBox()">
+                                        <i class="layui-icon layui-icon-edit"></i>Reply
+                                    </button>
+                                    <button type="button" class="layui-btn layui-btn-primary layui-btn-xs btn-reply-reply btn-mobile-reply" onclick="onClickOpenMobileCommentBox()">
+                                        <i class="layui-icon layui-icon-edit"></i>Reply
+                                    </button>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="blog-comment-item">
+                    <div class="user-avatar-info-box">
+                        <a href="#"><img class="avatar" src="https://images.fengwenyi.com/1193158348289167361" alt="head"></a>
+                        <div class="user-time-box">
+                            <span class="nickname"><a href="#">Erwin Feng</a></span>
+                            <span class="time">03.28 21:33</span>
+                        </div>
+                    </div>
+                    <div class="comment-content">
+                        毕业季读的一本书，恰似那段时光的迷惘，像极了书中的心情，青春心理成长的书，值得再看一次
+                    </div>
+                    <div class="comment-btn-box">
+                        <button type="button" class="layui-btn layui-btn-primary layui-btn-xs btn-comment-reply btn-pc-reply" onclick="onClickOpenCommentBox()">
+                            <i class="layui-icon layui-icon-edit"></i>Reply
+                        </button>
+                        <button type="button" class="layui-btn layui-btn-primary layui-btn-xs btn-comment-reply btn-mobile-reply" onclick="onClickOpenMobileCommentBox()">
+                            <i class="layui-icon layui-icon-edit"></i>Reply
+                        </button>
+                    </div>
+
+                    <div class="blog-comment-reply-box">
+                        <ul class="reply-list">
+                            <li class="reply-item">
+                                <div class="reply-user-avatar-info-box">
+                                    <div class="user-avatar-info-box">
+                                        <a href="#"><img class="avatar" src="https://images.fengwenyi.com/1193158348289167361" alt="head"></a>
+                                        <span class="user-nickname"><a href="#">User Nickname</a></span>
+                                    </div>
+                                    <span class="time">03.28 21:33</span>
+                                </div>
+                                <div class="reply-content-box">
+                                    <a class="replied-user-box" href="#">@<span>Replied User Nickname</span></a>
+                                    <span class="reply-content">
+                                        当我读完的时候，有一种愉快的心情，特别是读最后一段时，那是一种解放，一种开阔，一种放下，又是一种开始，在昭示着我们，青春正在进行
+                                    </span>
+                                </div>
+                                <div class="reply-btn-box">
+                                    <button type="button" class="layui-btn layui-btn-primary layui-btn-xs btn-reply-reply btn-pc-reply" onclick="onClickOpenCommentBox()">
+                                        <i class="layui-icon layui-icon-edit"></i>Reply
+                                    </button>
+                                    <button type="button" class="layui-btn layui-btn-primary layui-btn-xs btn-reply-reply btn-mobile-reply" onclick="onClickOpenMobileCommentBox()">
+                                        <i class="layui-icon layui-icon-edit"></i>Reply
+                                    </button>
+                                </div>
+                            </li>
+                            <li class="reply-item">
+                                <div class="reply-user-avatar-info-box">
+                                    <div class="user-avatar-info-box">
+                                        <a href="#"><img class="avatar" src="https://images.fengwenyi.com/1193158348289167361" alt="head"></a>
+                                        <span class="user-nickname"><a href="#">User Nickname</a></span>
+                                    </div>
+                                    <span class="time">03.28 21:33</span>
+                                </div>
+                                <div class="reply-content-box">
+                                    <a class="replied-user-box" href="#">@<span>Replied User Nickname</span></a>
+                                    <span class="reply-content">
+                                        当我读完的时候，有一种愉快的心情，特别是读最后一段时，那是一种解放，一种开阔，一种放下，又是一种开始，在昭示着我们，青春正在进行
+                                    </span>
+                                </div>
+                                <div class="reply-btn-box">
+                                    <button type="button" class="layui-btn layui-btn-primary layui-btn-xs btn-reply-reply btn-pc-reply" onclick="onClickOpenCommentBox()">
+                                        <i class="layui-icon layui-icon-edit"></i>Reply
+                                    </button>
+                                    <button type="button" class="layui-btn layui-btn-primary layui-btn-xs btn-reply-reply btn-mobile-reply" onclick="onClickOpenMobileCommentBox()">
+                                        <i class="layui-icon layui-icon-edit"></i>Reply
+                                    </button>
+                                </div>
+                            </li>
+                            <li class="reply-item">
+                                <div class="reply-user-avatar-info-box">
+                                    <div class="user-avatar-info-box">
+                                        <a href="#"><img class="avatar" src="https://images.fengwenyi.com/1193158348289167361" alt="head"></a>
+                                        <span class="user-nickname"><a href="#">User Nickname</a></span>
+                                    </div>
+                                    <span class="time">03.28 21:33</span>
+                                </div>
+                                <div class="reply-content-box">
+                                    <a class="replied-user-box" href="#">@<span>Replied User Nickname</span></a>
+                                    <span class="reply-content">
+                                        当我读完的时候，有一种愉快的心情，特别是读最后一段时，那是一种解放，一种开阔，一种放下，又是一种开始，在昭示着我们，青春正在进行
+                                    </span>
+                                </div>
+                                <div class="reply-btn-box">
+                                    <button type="button" class="layui-btn layui-btn-primary layui-btn-xs btn-reply-reply btn-pc-reply" onclick="onClickOpenCommentBox()">
+                                        <i class="layui-icon layui-icon-edit"></i>Reply
+                                    </button>
+                                    <button type="button" class="layui-btn layui-btn-primary layui-btn-xs btn-reply-reply btn-mobile-reply" onclick="onClickOpenMobileCommentBox()">
+                                        <i class="layui-icon layui-icon-edit"></i>Reply
+                                    </button>
+                                </div>
+                            </li>
+                            <li class="reply-item">
+                                <div class="reply-user-avatar-info-box">
+                                    <div class="user-avatar-info-box">
+                                        <a href="#"><img class="avatar" src="https://images.fengwenyi.com/1193158348289167361" alt="head"></a>
+                                        <span class="user-nickname"><a href="#">User Nickname</a></span>
+                                    </div>
+                                    <span class="time">03.28 21:33</span>
+                                </div>
+                                <div class="reply-content-box">
+                                    <a class="replied-user-box" href="#">@<span>Replied User Nickname</span></a>
+                                    <span class="reply-content">
+                                        当我读完的时候，有一种愉快的心情，特别是读最后一段时，那是一种解放，一种开阔，一种放下，又是一种开始，在昭示着我们，青春正在进行
+                                    </span>
+                                </div>
+                                <div class="reply-btn-box">
+                                    <button type="button" class="layui-btn layui-btn-primary layui-btn-xs btn-reply-reply btn-pc-reply" onclick="onClickOpenCommentBox()">
+                                        <i class="layui-icon layui-icon-edit"></i>Reply
+                                    </button>
+                                    <button type="button" class="layui-btn layui-btn-primary layui-btn-xs btn-reply-reply btn-mobile-reply" onclick="onClickOpenMobileCommentBox()">
+                                        <i class="layui-icon layui-icon-edit"></i>Reply
+                                    </button>
+                                </div>
+                            </li>
+                            <li class="reply-item">
+                                <div class="reply-user-avatar-info-box">
+                                    <div class="user-avatar-info-box">
+                                        <a href="#"><img class="avatar" src="https://images.fengwenyi.com/1193158348289167361" alt="head"></a>
+                                        <span class="user-nickname"><a href="#">User Nickname</a></span>
+                                    </div>
+                                    <span class="time">03.28 21:33</span>
+                                </div>
+                                <div class="reply-content-box">
+                                    <a class="replied-user-box" href="#">@<span>Replied User Nickname</span></a>
+                                    <span class="reply-content">
+                                        当我读完的时候，有一种愉快的心情，特别是读最后一段时，那是一种解放，一种开阔，一种放下，又是一种开始，在昭示着我们，青春正在进行
+                                    </span>
+                                </div>
+                                <div class="reply-btn-box">
+                                    <button type="button" class="layui-btn layui-btn-primary layui-btn-xs btn-reply-reply btn-pc-reply" onclick="onClickOpenCommentBox()">
+                                        <i class="layui-icon layui-icon-edit"></i>Reply
+                                    </button>
+                                    <button type="button" class="layui-btn layui-btn-primary layui-btn-xs btn-reply-reply btn-mobile-reply" onclick="onClickOpenMobileCommentBox()">
+                                        <i class="layui-icon layui-icon-edit"></i>Reply
+                                    </button>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="blog-comment-item">
+                    <div class="user-avatar-info-box">
+                        <a href="#"><img class="avatar" src="https://images.fengwenyi.com/1193158348289167361" alt="head"></a>
+                        <div class="user-time-box">
+                            <span class="nickname"><a href="#">Erwin Feng</a></span>
+                            <span class="time">03.28 21:33</span>
+                        </div>
+                    </div>
+                    <div class="comment-content">
+                        毕业季读的一本书，恰似那段时光的迷惘，像极了书中的心情，青春心理成长的书，值得再看一次
+                    </div>
+                    <div class="comment-btn-box">
+                        <button type="button" class="layui-btn layui-btn-primary layui-btn-xs btn-comment-reply btn-pc-reply" onclick="onClickOpenCommentBox()">
+                            <i class="layui-icon layui-icon-edit"></i>Reply
+                        </button>
+                        <button type="button" class="layui-btn layui-btn-primary layui-btn-xs btn-comment-reply btn-mobile-reply" onclick="onClickOpenMobileCommentBox()">
+                            <i class="layui-icon layui-icon-edit"></i>Reply
+                        </button>
+                    </div>
+
+                    <div class="blog-comment-reply-box">
+                        <ul class="reply-list">
+                            <li class="reply-item">
+                                <div class="reply-user-avatar-info-box">
+                                    <div class="user-avatar-info-box">
+                                        <a href="#"><img class="avatar" src="https://images.fengwenyi.com/1193158348289167361" alt="head"></a>
+                                        <span class="user-nickname"><a href="#">User Nickname</a></span>
+                                    </div>
+                                    <span class="time">03.28 21:33</span>
+                                </div>
+                                <div class="reply-content-box">
+                                    <a class="replied-user-box" href="#">@<span>Replied User Nickname</span></a>
+                                    <span class="reply-content">
+                                        当我读完的时候，有一种愉快的心情，特别是读最后一段时，那是一种解放，一种开阔，一种放下，又是一种开始，在昭示着我们，青春正在进行
+                                    </span>
+                                </div>
+                                <div class="reply-btn-box">
+                                    <button type="button" class="layui-btn layui-btn-primary layui-btn-xs btn-reply-reply btn-pc-reply" onclick="onClickOpenCommentBox()">
+                                        <i class="layui-icon layui-icon-edit"></i>Reply
+                                    </button>
+                                    <button type="button" class="layui-btn layui-btn-primary layui-btn-xs btn-reply-reply btn-mobile-reply" onclick="onClickOpenMobileCommentBox()">
+                                        <i class="layui-icon layui-icon-edit"></i>Reply
+                                    </button>
+                                </div>
+                            </li>
+                            <li class="reply-item">
+                                <div class="reply-user-avatar-info-box">
+                                    <div class="user-avatar-info-box">
+                                        <a href="#"><img class="avatar" src="https://images.fengwenyi.com/1193158348289167361" alt="head"></a>
+                                        <span class="user-nickname"><a href="#">User Nickname</a></span>
+                                    </div>
+                                    <span class="time">03.28 21:33</span>
+                                </div>
+                                <div class="reply-content-box">
+                                    <a class="replied-user-box" href="#">@<span>Replied User Nickname</span></a>
+                                    <span class="reply-content">
+                                        当我读完的时候，有一种愉快的心情，特别是读最后一段时，那是一种解放，一种开阔，一种放下，又是一种开始，在昭示着我们，青春正在进行
+                                    </span>
+                                </div>
+                                <div class="reply-btn-box">
+                                    <button type="button" class="layui-btn layui-btn-primary layui-btn-xs btn-reply-reply btn-pc-reply" onclick="onClickOpenCommentBox()">
+                                        <i class="layui-icon layui-icon-edit"></i>Reply
+                                    </button>
+                                    <button type="button" class="layui-btn layui-btn-primary layui-btn-xs btn-reply-reply btn-mobile-reply" onclick="onClickOpenMobileCommentBox()">
+                                        <i class="layui-icon layui-icon-edit"></i>Reply
+                                    </button>
+                                </div>
+                            </li>
+                            <li class="reply-item">
+                                <div class="reply-user-avatar-info-box">
+                                    <div class="user-avatar-info-box">
+                                        <a href="#"><img class="avatar" src="https://images.fengwenyi.com/1193158348289167361" alt="head"></a>
+                                        <span class="user-nickname"><a href="#">User Nickname</a></span>
+                                    </div>
+                                    <span class="time">03.28 21:33</span>
+                                </div>
+                                <div class="reply-content-box">
+                                    <a class="replied-user-box" href="#">@<span>Replied User Nickname</span></a>
+                                    <span class="reply-content">
+                                        当我读完的时候，有一种愉快的心情，特别是读最后一段时，那是一种解放，一种开阔，一种放下，又是一种开始，在昭示着我们，青春正在进行
+                                    </span>
+                                </div>
+                                <div class="reply-btn-box">
+                                    <button type="button" class="layui-btn layui-btn-primary layui-btn-xs btn-reply-reply btn-pc-reply" onclick="onClickOpenCommentBox()">
+                                        <i class="layui-icon layui-icon-edit"></i>Reply
+                                    </button>
+                                    <button type="button" class="layui-btn layui-btn-primary layui-btn-xs btn-reply-reply btn-mobile-reply" onclick="onClickOpenMobileCommentBox()">
+                                        <i class="layui-icon layui-icon-edit"></i>Reply
+                                    </button>
+                                </div>
+                            </li>
+                            <li class="reply-item">
+                                <div class="reply-user-avatar-info-box">
+                                    <div class="user-avatar-info-box">
+                                        <a href="#"><img class="avatar" src="https://images.fengwenyi.com/1193158348289167361" alt="head"></a>
+                                        <span class="user-nickname"><a href="#">User Nickname</a></span>
+                                    </div>
+                                    <span class="time">03.28 21:33</span>
+                                </div>
+                                <div class="reply-content-box">
+                                    <a class="replied-user-box" href="#">@<span>Replied User Nickname</span></a>
+                                    <span class="reply-content">
+                                        当我读完的时候，有一种愉快的心情，特别是读最后一段时，那是一种解放，一种开阔，一种放下，又是一种开始，在昭示着我们，青春正在进行
+                                    </span>
+                                </div>
+                                <div class="reply-btn-box">
+                                    <button type="button" class="layui-btn layui-btn-primary layui-btn-xs btn-reply-reply btn-pc-reply" onclick="onClickOpenCommentBox()">
+                                        <i class="layui-icon layui-icon-edit"></i>Reply
+                                    </button>
+                                    <button type="button" class="layui-btn layui-btn-primary layui-btn-xs btn-reply-reply btn-mobile-reply" onclick="onClickOpenMobileCommentBox()">
+                                        <i class="layui-icon layui-icon-edit"></i>Reply
+                                    </button>
+                                </div>
+                            </li>
+                            <li class="reply-item">
+                                <div class="reply-user-avatar-info-box">
+                                    <div class="user-avatar-info-box">
+                                        <a href="#"><img class="avatar" src="https://images.fengwenyi.com/1193158348289167361" alt="head"></a>
+                                        <span class="user-nickname"><a href="#">User Nickname</a></span>
+                                    </div>
+                                    <span class="time">03.28 21:33</span>
+                                </div>
+                                <div class="reply-content-box">
+                                    <a class="replied-user-box" href="#">@<span>Replied User Nickname</span></a>
+                                    <span class="reply-content">
+                                        当我读完的时候，有一种愉快的心情，特别是读最后一段时，那是一种解放，一种开阔，一种放下，又是一种开始，在昭示着我们，青春正在进行
+                                    </span>
+                                </div>
+                                <div class="reply-btn-box">
+                                    <button type="button" class="layui-btn layui-btn-primary layui-btn-xs btn-reply-reply btn-pc-reply" onclick="onClickOpenCommentBox()">
+                                        <i class="layui-icon layui-icon-edit"></i>Reply
+                                    </button>
+                                    <button type="button" class="layui-btn layui-btn-primary layui-btn-xs btn-reply-reply btn-mobile-reply" onclick="onClickOpenMobileCommentBox()">
+                                        <i class="layui-icon layui-icon-edit"></i>Reply
+                                    </button>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="pop-form-box" id="pop-form-box">
+        <form class="layui-form" action="" method="post" lay-verify="pop-form">
+            <div class="layui-form-item">
+                <textarea name="content" required lay-verify="required" placeholder="Write your idea" class="layui-textarea"></textarea>
+            </div>
+            <div class="layui-form-item">
+                <button type="submit" class="layui-btn layui-btn-normal btn-login" lay-submit lay-filter="pop-form">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="../static/js/blog/components/comment.js"></script>
+</body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>[User] - Erwin Feng's Blog</title>
+
+    <meta name="author" content="Erwin Feng"/>
+    <meta name="keyword" content="Erwin Feng,Personal Web,Blog,Java,Spring,Spring Boot,Spring Cloud,MyBatis,MyBatis-Plus,Elasticsearch,RabbitMQ,kafka,MongoDB,MySQL,Oracle,API,JavaLib,api-result"/>
+    <meta name="description" content="Hello, I'm Erwin Feng, Nice to meet you. I'm a Java Coder. My work is to program design and software development. I am also doing some open source software such as JavaLib and api-result. Beside this I like watching movies, playing games, listening music and traveling"/>
+
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge，chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="../static/layui/css/layui.css">
+    <link rel="stylesheet" href="../static/css/common/style.css">
+    <link rel="stylesheet" href="../static/css/user/index.css">
+</head>
+<body>
+
+    <header id="header"></header>
+
+
+    <section class="container">
+        <div class="wyf-center">
+            <!-- personal info -->
+            <div class="box-user-info">
+                <div class="box-user-head">
+                    <img class="avatar" src="https://img1.sycdn.imooc.com/5ae9ef520001162304800480-140-140.jpg">
+                    <button type="button" class="layui-btn btn-upload-head" onclick="onClickOpenSelectHead()">Upload Head</button>
+                </div>
+                <div class="box-user-datum">
+                    <div class="box-user-base-info">
+                        <div class="user-info">
+                            <div class="nickname">Erwin Feng</div>
+                            <div class="item">Male</div>
+                        </div>
+                        <div class="box-option">
+                            <div class="btn btn-pc" onclick="onClickOpenEditPersonalInfoBox()"><i class="layui-icon layui-icon-edit"></i>Edit</div>
+                            <div class="btn btn-mobile" onclick="onClickOpenMobileEditPersonalInfoBox()"><i class="layui-icon layui-icon-edit"></i>Edit</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="layui-tab layui-tab-brief user-news-container" lay-filter="docDemoTabBrief">
+                <ul class="layui-tab-title">
+                    <li class="layui-this">Like Blog</li>
+                    <li>News</li>
+                </ul>
+                <div class="layui-tab-content">
+                    <div class="layui-tab-item layui-show">
+                        <ul class="blog-like-list">
+                            <li class="blog-like-item">
+                                <a class="title" href="../blog/blog.html">标题</a>
+                                <span class="time">2020.03.31</span>
+                            </li>
+                            <li class="blog-like-item">
+                                <a class="title" href="../blog/blog.html">标题</a>
+                                <span class="time">2020.03.31</span>
+                            </li>
+                            <li class="blog-like-item">
+                                <a class="title" href="../blog/blog.html">标题</a>
+                                <span class="time">2020.03.31</span>
+                            </li>
+                            <li class="blog-like-item">
+                                <a class="title" href="../blog/blog.html">标题</a>
+                                <span class="time">2020.03.31</span>
+                            </li>
+                            <li class="blog-like-item">
+                                <a class="title" href="../blog/blog.html">标题</a>
+                                <span class="time">2020.03.31</span>
+                            </li>
+                            <li class="blog-like-item">
+                                <a class="title" href="../blog/blog.html">标题</a>
+                                <span class="time">2020.03.31</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="layui-tab-item">
+                        <!--
+                        1、回复我评论的
+                        2、回复我回复的
+                        -->
+                        <ul class="news-list">
+                            <li class="news-item">
+                                <a href="#"><img class="avatar" src="https://images.fengwenyi.com/1193158348289167361" alt="head"></a>
+                                <div class="user-blog-time-box">
+                                    <div class="user-nickname-box">
+                                        <a class="nickname" href="#">nickname</a>
+                                        <span class="reply-tip">reply you</span>
+                                    </div>
+                                    <div class="blog-link-box">
+                                        <a class="blog-title" href="../blog/blog.html">文章</a>
+                                    </div>
+                                    <div class="time">2020.04.01 00:23</div>
+                                </div>
+                            </li>
+                            <li class="news-item">
+                                <a href="#"><img class="avatar" src="https://images.fengwenyi.com/1193158348289167361" alt="head"></a>
+                                <div class="user-blog-time-box">
+                                    <div class="user-nickname-box">
+                                        <a class="nickname" href="#">nickname</a>
+                                        <span class="reply-tip">reply you</span>
+                                    </div>
+                                    <div class="blog-link-box">
+                                        <a class="blog-title" href="../blog/blog.html">文章</a>
+                                    </div>
+                                    <div class="time">2020.04.01 00:23</div>
+                                </div>
+                            </li>
+                            <li class="news-item">
+                                <a href="#"><img class="avatar" src="https://images.fengwenyi.com/1193158348289167361" alt="head"></a>
+                                <div class="user-blog-time-box">
+                                    <div class="user-nickname-box">
+                                        <a class="nickname" href="#">nickname</a>
+                                        <span class="reply-tip">reply you</span>
+                                    </div>
+                                    <div class="blog-link-box">
+                                        <a class="blog-title" href="../blog/blog.html">文章</a>
+                                    </div>
+                                    <div class="time">2020.04.01 00:23</div>
+                                </div>
+                            </li>
+                            <li class="news-item">
+                                <a href="#"><img class="avatar" src="https://images.fengwenyi.com/1193158348289167361" alt="head"></a>
+                                <div class="user-blog-time-box">
+                                    <div class="user-nickname-box">
+                                        <a class="nickname" href="#">nickname</a>
+                                        <span class="reply-tip">reply you</span>
+                                    </div>
+                                    <div class="blog-link-box">
+                                        <a class="blog-title" href="../blog/blog.html">文章</a>
+                                    </div>
+                                    <div class="time">2020.04.01 00:23</div>
+                                </div>
+                            </li>
+                            <li class="news-item">
+                                <a href="#"><img class="avatar" src="https://images.fengwenyi.com/1193158348289167361" alt="head"></a>
+                                <div class="user-blog-time-box">
+                                    <div class="user-nickname-box">
+                                        <a class="nickname" href="#">nickname</a>
+                                        <span class="reply-tip">reply you</span>
+                                    </div>
+                                    <div class="blog-link-box">
+                                        <a class="blog-title" href="../blog/blog.html">文章</a>
+                                    </div>
+                                    <div class="time">2020.04.01 00:23</div>
+                                </div>
+                            </li>
+                            <li class="news-item">
+                                <a href="#"><img class="avatar" src="https://images.fengwenyi.com/1193158348289167361" alt="head"></a>
+                                <div class="user-blog-time-box">
+                                    <div class="user-nickname-box">
+                                        <a class="nickname" href="#">nickname</a>
+                                        <span class="reply-tip">reply you</span>
+                                    </div>
+                                    <div class="blog-link-box">
+                                        <a class="blog-title" href="../blog/blog.html">文章</a>
+                                    </div>
+                                    <div class="time">2020.04.01 00:23</div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Like Blog -->
+
+            <!-- comment and reply -->
+        </div>
+    </section>
+
+    <div class="pop-form-box" id="pop-form-box">
+        <form class="layui-form" action="" method="post" lay-verify="pop-form">
+            <div class="layui-form-item">
+                <input autocomplete="off" class="layui-input" lay-verify="required" name="nickname" placeholder="Nickname" required
+                       type="text">
+            </div>
+            <div class="layui-form-item">
+                <input checked name="sex" title="Male" type="radio" value="1">
+                <input name="sex" title="Female" type="radio" value="2">
+            </div>
+            <div class="layui-form-item">
+                <button type="submit" class="layui-btn layui-btn-normal btn-login" lay-submit lay-filter="pop-form">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <input type="file" id="input-file-head" hidden>
+
+    <footer id="footer"></footer>
+
+    <script src="../static/libs/jquery-3.4.1.js"></script>
+    <script src="../static/layui/layui.js"></script>
+    <script src="../static/js/user/index.js"></script>
+</body>
+</html>

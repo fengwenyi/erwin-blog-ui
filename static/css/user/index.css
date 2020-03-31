@@ -1,0 +1,175 @@
+@charset "UTF-8";
+
+.container {
+    background-color: #eee;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.box-user-info {
+    display: flex;
+    background-color: #fff;
+    padding: 50px;
+    margin-bottom: 50px;
+}
+.box-user-info .box-user-head {
+    width: 150px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+}
+.box-user-info .box-user-head .avatar {
+    width: 138px;
+    height: 138px;
+    border-radius: 138px;
+}
+.box-user-info .box-user-head .btn-upload-head {
+    margin-top: 10px;
+}
+
+.box-user-info .box-user-datum {
+    width: 100%;
+    margin-left: 100px;
+}
+.box-user-info .box-user-datum .box-user-base-info {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+}
+.box-user-info .box-user-datum .box-user-base-info .user-info {
+    display: flex;
+    align-items: center;
+}
+.box-user-info .box-user-datum .box-user-base-info .user-info .nickname {
+    font-size: 30px;
+}
+.box-user-info .box-user-datum .box-user-base-info .user-info .item {
+    margin-left: 15px;
+}
+.box-user-info .box-user-datum .box-user-base-info .box-option {
+
+}
+.box-user-info .box-user-datum .box-user-base-info .box-option .btn {
+    color: #999;
+    cursor: pointer;
+}
+.box-user-info .box-user-datum .box-user-base-info .box-option .btn:hover {
+    color: #009688;
+}
+.box-user-info .box-user-datum .box-user-base-info .box-option .btn > i {
+    margin-right: 5px;
+}
+
+.pop-form-box {
+    display: none;
+    padding: 30px;
+}
+
+.user-news-container {
+    background-color: #fff;
+    padding: 50px;
+}
+
+.blog-like-list .blog-like-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+.blog-like-list .blog-like-item .title {
+    color: #333;
+    font-size: 20px;
+    font-weight: bolder;
+}
+.blog-like-list .blog-like-item .time {
+    color: #999;
+    font-size: 10px;
+    margin-top: 10px;
+}
+
+.news-list .news-item {
+    margin-bottom: 10px;
+    display: flex;
+}
+.news-list .news-item .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+}
+.news-list .news-item .user-blog-time-box {
+    margin-left: 10px;
+}
+.news-list .news-item .user-blog-time-box .user-nickname-box {
+    display: flex;
+    align-items: center;
+}
+.news-list .news-item .user-blog-time-box .user-nickname-box .nickname {
+
+}
+.news-list .news-item .user-blog-time-box .user-nickname-box .reply-tip {
+    margin-left: 10px;
+    color: #999;
+    font-size: 10px;
+    font-weight: lighter;
+}
+.news-list .news-item .user-blog-time-box .blog-link-box {
+    margin-top: 10px;
+    background-color: #eee;
+    padding: 10px;
+    border-radius: 2px;
+}
+.news-list .news-item .user-blog-time-box .blog-link-box .blog-title {
+    color: #0077ff;
+}
+.news-list .news-item .user-blog-time-box .time {
+    color: #999;
+    font-size: 10px;
+    margin-top: 10px;
+    font-weight: lighter;
+}
+
+
+@media only screen and (max-width: 960px) {
+    .box-user-info {
+        display: flex;
+        flex-direction: column;
+    }
+    .box-user-info .box-user-datum {
+        margin-left: 0;
+        margin-top: 30px;
+        border-top: 1px solid #eee;
+        padding-top: 20px;
+    }
+    .box-user-info .box-user-datum .box-user-base-info {
+        display: flex;
+        flex-direction: column;
+    }
+    .box-user-info .box-user-datum .box-user-base-info .user-info {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+    }
+    .box-user-info .box-user-datum .box-user-base-info .user-info .item {
+        margin-top: 10px;
+    }
+    .box-user-info .box-user-datum .box-user-base-info .box-option {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .box-user-info .box-user-datum .box-user-base-info .box-option .btn-mobile {
+        display: block;
+    }
+    .box-user-info .box-user-datum .box-user-base-info .box-option .btn-pc {
+        display: none;
+    }
+}
+@media only screen and (min-width: 960px) {
+    .box-user-info .box-user-datum .box-user-base-info .box-option .btn-mobile {
+        display: none;
+    }
+    .box-user-info .box-user-datum .box-user-base-info .box-option .btn-pc {
+        display: block;
+    }
+}

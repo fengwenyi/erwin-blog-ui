@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Header</title>
+
+    <link rel="stylesheet" href="../static/css/common/header.css">
+</head>
+<body>
+    <div class="common-header pc-header" id="header">
+        <div class="wyf-center">
+            <div class="header-container">
+                <div class="header-logo-nav">
+                    <a href="#" class="box-header-logo">
+                        <img class="header-logo" src="https://images.fengwenyi.com/1210844516430385154" alt="Logo">
+                    </a>
+                    <ul class="header-nav">
+                        <li class="header-nav-item">
+                            <a class="header-a-goto-nav header-nav-home" href="../index/index.html">Home</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="header-user-container">
+                    <!--<button type="button" class="layui-btn layui-btn-primary header-btn-register" onclick="onClickGotoRegister()">Sign up</button>
+                    <button type="button" class="layui-btn layui-btn-normal header-btn-login" onclick="onClickOpenLoginBox()">Sign in</button>-->
+                    <button type="button" class="layui-btn layui-btn-primary header-btn-logout">Sign out</button>
+                    <span class="header-user-nickname">Erwin Feng</span>
+                    <a href="../user/index.html" class="header-a-goto-user-index">
+                        <img class="header-user-head" src="https://images.fengwenyi.com/1193158348289167361" alt="User head">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="box-login-form">
+        <form class="layui-form" action="" method="post" lay-verify="form-login">
+            <div class="layui-form-item">
+                <input type="email" name="account" required lay-verify="required|email" placeholder="Erwin ID" autocomplete="off" class="layui-input">
+            </div>
+            <div class="layui-form-item">
+                <input type="password" name="password" required  lay-verify="required|password" placeholder="Password" autocomplete="off" class="layui-input">
+            </div>
+            <div class="layui-form-item">
+                <button type="submit" class="layui-btn layui-btn-normal btn-login" lay-submit lay-filter="form-login">Sign In</button>
+            </div>
+            <div class="option-box">
+                <a class="link-goto" href="../auth/reset-password.html">Forgot your password?</a>
+                <span class="link-goto" onclick="onClickGotoRegister()">Don't have an Erwin ID? Create one now.</span>
+            </div>
+        </form>
+    </div>
+
+    <div id="mobile-header"></div>
+
+    <script src="../static/js/common/header.js"></script>
+</body>
+</html>

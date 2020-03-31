@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+.mobile-header {
+    height: 48px;
+    background-color: #fff;
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 10px;
+}
+.mobile-header .btn-menu .iconfont {
+    font-size: 30px;
+    color: #777;
+}
+.mobile-header .logo {
+    height: 40px;
+}
+
+.mobile-header .header-user-container {
+    max-width: 300px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+.mobile-header .header-user-container .header-btn-login {
+    margin-right: 10px;
+}
+.mobile-header .header-user-container .header-user-head {
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    border: 1px solid #eee;
+    box-shadow: 0 0 5px #e3e3e3;
+}
+.mobile-header .header-user-container .header-user-nickname {
+    margin-right: 10px;
+}
+.mobile-header .header-user-container .header-a-goto-user-index {
+    margin-right: 10px;
+}
+
+@media only screen and (max-width: 960px) {
+    .mobile-header {
+        display: flex;
+    }
+}
