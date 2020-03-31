@@ -70,18 +70,25 @@
     }
 }
 @media (prefers-color-scheme: dark) {
-    body {
-        background-color: #444;
-        color: #e4e4e4;
-    }
-    a {
-        color: #e39777;
-    }
-    img {
-        filter: grayscale(30%);
-    }
     .f-footer {
-        background-color: #777;
-        color: #e4e4e4;
+        background-color: #333;
+    }
+    .f-footer > p {
+        color: #bbb;
+    }
+    .f-footer > p > a {
+        color: #bbb;
+    }
+    .f-footer > p > a:hover {
+        color: #ddd;
+    }
+    .f-footer .follow-me {
+        color: #fff;
+    }
+    .f-footer .f-social-contact .f-social-contact-list .f-social-contact-item .f-a-goto-link {
+        color: #c3c3c3;
+    }
+    .f-footer .f-social-contact .f-social-contact-list .f-social-contact-item .f-a-goto-link:hover {
+        color: #fff;
     }
 }
